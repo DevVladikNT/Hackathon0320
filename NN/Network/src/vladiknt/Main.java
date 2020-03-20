@@ -8,5 +8,6 @@ public class Main {
         int e = 5;
         int d = f+e;
         System.out.println(d);
+        System.out.println("Vanya pidor");
     }
 }
