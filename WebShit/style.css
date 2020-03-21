@@ -24,16 +24,18 @@ h3 {
 /* ----------HEADER section------------ */
 .header {
     display: grid;
-    grid-template-columns: 20vw auto 20vw;
+    grid-template-columns: 7vw 40vw 6vw auto 20vw;
     grid-template-rows: auto;
     grid-template-areas: 
-        "header header header";
+        "headerSignIn headerEmpty1 headerLogo headerEmpty2 headerOption";
     align-items: center;
 
     background-color: #595959;
 }
 
 .header__sign-in {
+    grid-area: headerSignIn;
+
     margin-left: 25px;
 
     color: #FFF;
@@ -41,12 +43,24 @@ h3 {
     font-size: 24px;
 }
 
+.header__home-link {
+    /* display: block; */
+    padding: 0 auto;
+}
+
+.header__home-link {
+    grid-area: headerLogo;
+}
+
 .header__logo {
     display: block;
+    margin: auto auto;
     justify-self: center;
 }
 
 .header__right-buttons-wrapper {
+    grid-area: headerOption;
+
     display: flex;
     align-items: center;
 }
@@ -68,7 +82,6 @@ h3 {
 
 ::placeholder {
     font: 600 15px Arial, sans-serif;
-    /* font-family: Arial, sans-serif; */
     color: rgba(255, 255, 255, 0.75);
 }
 
@@ -76,9 +89,6 @@ h3 {
 .page__category {
     box-sizing: border-box;
     width: 100%;
-    /* width: 970px; */
-    /* min-height: 200px; */
-    /* margin: 30px auto; */
 }
 
 .category {
@@ -227,7 +237,7 @@ h3 {
     align-items: center;
     top: -25px;
     right: -215px;
-    
+
     width: 50px;
     height: 50px;
     background-color: #0D0D0D;
