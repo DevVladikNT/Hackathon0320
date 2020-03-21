@@ -5,22 +5,10 @@ import java.util.Arrays;
 public class Main {
 
     public static void main(String[] args) {
-        double[][] mat1 = new double[][] {
-                {1, 2, 4, 5},
-                {3, 4, 12, 78},
-                {1, 4, 18, 7}
-        };
-        double[][] mat2 = new double[][] {
-                {5, 7, 1, 6},
-                {1, 7, 1, 7},
-                {5, 12, 13, 9},
-                {45, 16, 6, -1}
-        };
+        double[][] test = new double[][]{{100, 0, 0, 0, 0, 0, 0, 0, 100, 0, 100, 12, 2018}};
+        Network nw = new Network(false);
 
-        System.out.println(Arrays.deepToString(Matrix.multiply(mat1, mat2)));
-
-        System.out.println(Arrays.deepToString(Matrix.transposition(mat1)));
-
-        System.out.println("Testim GitHub");
+        nw.show();
+        System.out.println(nw.predict(test));
     }
 }
