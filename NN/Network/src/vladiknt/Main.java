@@ -20,5 +20,7 @@ public class Main {
         System.out.println(Arrays.deepToString(Matrix.multiply(mat1, mat2)));
 
         System.out.println(Arrays.deepToString(Matrix.transposition(mat1)));
+
+        System.out.println("Testim GitHub");
     }
 }
