@@ -6,17 +6,13 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <link rel="stylesheet" href="style.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-        <!-- <script src="/JS/JS_home/special-offer.js"></script> -->
     </head>
     <body class="page">
         <div class="page__inner">
             <header class="page__header header">
                 <a class="header__sign-in" href="#pop-up">ВХОД</a>
-                    <!-- <button class="header__account-button header-button text-button">Аккаунт</button> -->
-                    <!-- <button class="header__about-button header-button text-button">О нас</button> -->
                 <img class="header__logo" src="icons/logo.png" alt="логотип">
                 <div class="header__right-buttons-wrapper">
-                    <!-- <button class="header__search-button header-button text-button">Поиск</button> -->
                     <input class="header__search" type="text" placeholder="ПОИСК">
                     <a href="header__shopping-cart-button header-button icon-button">
                         <img class="icon-button__img" src="icons/shoping.png" alt="">
@@ -26,18 +22,8 @@
                     </a>
                 </div>
             </header>
-            <!-- <section class="page__category category">
-                <button class="category__special-offer-button text-button">Акция</button>
-                <button class="category__popular-button text-button">Популярное</button>
-                <button class="category__section-button text-button">Разделы</button>
-                <button class="category__personal-button text-button">Для вас</button>
-                <button class="category__all-button text-button">Все</button>
-            </section> -->
             <section class="page__category category">
                 <!-- jQuery category here -->
-
-                <!-- category__item--standart-size
-                category__item--double-size -->
                 <a class="category__item-link-wrapper" href="">
                     <figure class="category__item item">
                         <img class="item__img" src="content/home-page__category/sale.jpg" alt="">
@@ -90,6 +76,7 @@
 
             <!-- POP-UP LOGIN WINDOW -->
             <div class="login-pop-up" id="pop-up">
+                <a class="login-pop-up__close-button" href="#"></a>
                 <p class="login-pop-up__title">ВХОД</p>
                 <form class="login-pop-up__form" action="">
                     <div class="login-pop-up__wrapper form-input">
@@ -100,7 +87,11 @@
                         <label class="form-input__name" for="password">Пароль</label>
                         <input class="form-input__input" type="password" id="password">
                     </div>
-                    <input class="login-pop-up__submit-button" type="submit" value="Войти">
+                    <input class="login-pop-up__submit-button" type="submit" value="ВОЙТИ">
+                    <div class="login-pop-up__wrapper login-extra-option">
+                        <a class="login-extra-option__forget-password" href="">Забыли пароль?</a>
+                        <a class="login-extra-option__sign-up" href="">ЗАРЕГИСТРИРОВАТЬСЯ</a>
+                    </div>
                 </form>
             </div>
         </div>
