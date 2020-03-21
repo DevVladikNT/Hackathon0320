@@ -91,14 +91,16 @@
             <!-- POP-UP LOGIN WINDOW -->
             <div class="login-pop-up" id="pop-up">
                 <p class="login-pop-up__title">ВХОД</p>
-                <form action="">
-                    <div class="login-pop-up__wrapper">
-                        <label for="login">Логин</label><input type="text" id="login">
+                <form class="login-pop-up__form" action="">
+                    <div class="login-pop-up__wrapper form-input">
+                        <label class="form-input__name" for="login">Логин</label>
+                        <input class="form-input__input" type="text" id="login">
                     </div>
-                    <div class="login-pop-up__wrapper">
-                        <label for="password">Пароль</label><input type="password" id="password">
+                    <div class="login-pop-up__wrapper form-input">
+                        <label class="form-input__name" for="password">Пароль</label>
+                        <input class="form-input__input" type="password" id="password">
                     </div>
-                    <input type="submit" value="Войти">
+                    <input class="login-pop-up__submit-button" type="submit" value="Войти">
                 </form>
             </div>
         </div>
