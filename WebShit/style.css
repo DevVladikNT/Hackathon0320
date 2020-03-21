@@ -10,6 +10,7 @@
 .page__inner {
     /* width: 1120px; */
     width: 100%;
+    height: 100vh;
     margin: 0 auto;
 
     /* border: 18px solid #595959; */
@@ -18,36 +19,55 @@
 
 /* ----------HEADER section------------ */
 .header {
-    display: flex;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: 20vw auto 20vw;
+    grid-template-rows: auto;
+    grid-template-areas: 
+        "header header header";
+    align-items: center;
 
     background-color: #595959;
 }
 
 .header__left-buttons-wrapper {
-    margin: 18px auto 18px 20px;
+    margin-left: 25px;
+    /* margin: 18px auto 18px 20px; */
 }
 
 .header__logo {
-    margin: 5px auto auto;
+    display: block;
+    justify-self: center;
+    /* margin: 5px auto auto; */
     /* transform: translateX(-50%); center */
 }
 
 .header__right-buttons-wrapper {
-    margin: 18px 20px 18px auto;
+    /* margin: 18px 20px 18px auto; */
+    display: flex;
+    align-items: center;
+    /* justify-content: space-between; */
 }
 
-/* --------CATEGORY section------------ */
-/* .category {
-    display: flex;
-    padding: 0 25px;
+.header__search {
+    width: 275px;
+    height: 23px;
+    margin-right: 30px;
 
-    justify-content: space-around;
-} */
+    padding: 1.25%;
+    border-radius: 10px;
+    border: 1px solid #FFF;
 
-/* .category__section-button {
-    transform: translateX(-50%);
-} */
+    background-color: #474747;
+
+    font: 600 15px Arial, sans-serif;
+    color: #FFF;
+}
+
+::placeholder {
+    font: 600 15px Arial, sans-serif;
+    /* font-family: Arial, sans-serif; */
+    color: rgba(255, 255, 255, 0.75);
+}
 
 /* --------CATEGORY section-------------- */
 .page__category {
@@ -76,7 +96,7 @@
     display: block;
     width: 640px;
     /* max-width: 640px; */
-    height: calc((100vh - 74px) / 2);
+    height: calc((100vh - 58px) / 2);
     object-fit: cover;
 }
 
@@ -97,11 +117,9 @@
     transform: translate(-50%,-50%);
 
     font-size: 50px;
+
+    user-select: none;
 }
-
-
-/* --------FOOTER section--------------- */
-
 
 /* ---------BUTTON section------------- */
 .text-button {
@@ -118,15 +136,33 @@
 }
 
 .header-button {
-    display: inline-block;
-    vertical-align: top;
+    /* display: inline-block; */
+    /* vertical-align: top; */
 }
 
 .icon-button {
+    position: relative;
+
     background-color: #F27E88;
     border: 2px solid #0D0D0D;
 }
 
 .icon-button__img {
-    width: 75%;
+    width: 40px;
+    object-fit: cover;
+    display: inline-block;
+}
+
+.icon-button__counter {
+    position: absolute;
+    display: inline-block;
+
+    width: 15px;
+    height: 15px;
+    background-color: #0D0D0D;
+    border-radius: 50%;
+
+    color: #FFF;
+    font-size: 10px;
+    text-align: center;
 }
