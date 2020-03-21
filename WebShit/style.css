@@ -33,11 +33,42 @@
 /* --------CATEGORY section------------ */
 .category {
     display: flex;
+    padding: 0 25px;
+
     justify-content: space-around;
 }
 
-.category__section-button {
+/* .category__section-button {
     transform: translateX(-50%);
+} */
+
+/* --------CONTENT section-------------- */
+.page__content {
+    box-sizing: border-box;
+    width: 970px;
+    min-height: 200px;
+    margin: 30px 25px;
+}
+
+.content {
+    display: flex;
+    flex-wrap: wrap;
+
+    /* padding: 5px; */
+
+    background-color: salmon;
+}
+
+.content__item {
+
+}
+
+.item {
+
+}
+
+.item--standart-size {
+    
 }
 
 /* --------FOOTER section--------------- */
