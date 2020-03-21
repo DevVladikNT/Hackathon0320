@@ -1,20 +1,24 @@
 .page {
     margin: 0;
     font-family: Arial, sans-serif;
+    color: #FFF;
 }
 
 .page__inner {
-    width: 1020px;
+    /* width: 1120px; */
+    width: 100%;
     margin: 0 auto;
 
-    border: 18px solid #595959;
-    background-color: #A6A6A6;
+    /* border: 18px solid #595959; */
+    background-color: #595959;
 }
 
 /* ----------HEADER section------------ */
 .header {
     display: flex;
     justify-content: center;
+
+    background-color: #595959;
 }
 
 .header__left-buttons-wrapper {
@@ -31,64 +35,64 @@
 }
 
 /* --------CATEGORY section------------ */
-.category {
+/* .category {
     display: flex;
     padding: 0 25px;
 
     justify-content: space-around;
-}
+} */
 
 /* .category__section-button {
     transform: translateX(-50%);
 } */
 
-/* --------CONTENT section-------------- */
-.page__content {
+/* --------CATEGORY section-------------- */
+.page__category {
     box-sizing: border-box;
-    width: 970px;
-    min-height: 200px;
-    margin: 30px 25px;
+    width: 100%;
+    /* width: 970px; */
+    /* min-height: 200px; */
+    /* margin: 30px auto; */
 }
 
-.content {
+.category {
     display: flex;
     flex-wrap: wrap;
-
-    /* padding: 5px; */
-
-    background-color: salmon;
 }
 
-.content__item {
-
+.category__item {
+    box-sizing: border-box;
+    margin: 0;
 }
 
 .item {
-
+    position: relative;
 }
 
-.item--standart-size {
-    
+.item__img {
+    display: block;
+    width: 640px;
+    /* max-width: 640px; */
+    height: calc((100vh - 74px) / 2);
+    object-fit: cover;
 }
+
+.item__description {
+    position: absolute;
+    display: block;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
 
 /* --------FOOTER section--------------- */
 
-.sprite {
-    display: inline-block;
-    width: 24px;
-    height: 24px;
-
-    background-position: left 29px;
-}
-
-.sprite--facebook {
-    background: url(icons/facebook.png) left top no-repeat;
-}
 
 /* ---------BUTTON section------------- */
 .text-button {
     background-color: rgba(0, 0, 0, 0);
-    color: black;
+    color: #FFF;
     border: 0; /* Green */
 
     font-size: 22px;
