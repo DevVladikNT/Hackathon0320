@@ -1,0 +1,82 @@
+.page {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.page__inner {
+    width: 1020px;
+    margin: 0 auto;
+
+    border: 18px solid #595959;
+    background-color: #A6A6A6;
+}
+
+/* ----------HEADER section------------ */
+.header {
+    display: flex;
+    justify-content: center;
+}
+
+.header__left-buttons-wrapper {
+    margin: 18px auto 18px 20px;
+}
+
+.header__logo {
+    margin: 5px auto auto;
+    transform: translateX(-50%); /* center */
+}
+
+.header__right-buttons-wrapper {
+    margin: 18px 20px 18px auto;
+}
+
+/* --------CATEGORY section------------ */
+.category {
+    display: flex;
+    justify-content: space-around;
+}
+
+.category__section-button {
+    transform: translateX(-50%);
+}
+
+/* --------FOOTER section--------------- */
+
+.sprite {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+
+    background-position: left 29px;
+}
+
+.sprite--facebook {
+    background: url(icons/facebook.png) left top no-repeat;
+}
+
+/* ---------BUTTON section------------- */
+.text-button {
+    background-color: rgba(0, 0, 0, 0);
+    color: black;
+    border: 0; /* Green */
+
+    font-size: 22px;
+}
+
+.text-button:hover {
+    cursor: pointer;
+}
+
+.header-button {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.icon-button {
+    background-color: #F27E88;
+    border: 2px solid #0D0D0D;
+}
+
+.icon-button__img {
+    width: 75%;
+}
