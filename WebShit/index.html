@@ -5,30 +5,43 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <link rel="stylesheet" href="style.css">
-        <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
-        <script src="/JS/JS_home/special-offer.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <!-- <script src="/JS/JS_home/special-offer.js"></script> -->
     </head>
     <body class="page">
         <div class="page__inner">
             <header class="page__header header">
                 <button class="header__account-button text-button"></button>
                 <button class="header__about-button text-button"></button>
-                <img src="" alt="логотип">
-                <button class="header__search-button"></button>
+                <img class="header__logo" src="" alt="логотип">
+                <button class="header__search-button">Поиск</button>
                 <button class="header__shopping-cart-button icon-button"></button>
             </header>
             <section class="page__category category">
-                <button class="category__special-offer-button text-button"></button>
-                <button class="category__popular-button text-button"></button>
-                <button class="category__section-button text-button"></button>
-                <button class="category__personal-button text-button"></button>
-                <button class="category__all-button text-button"></button>
+                <button class="category__special-offer-button text-button">Акция</button>
+                <button class="category__popular-button text-button">Популярное</button>
+                <button class="category__section-button text-button">Разделы</button>
+                <button class="category__personal-button text-button">Для вас</button>
+                <button class="category__all-button text-button">Все</button>
             </section>
             <section class="page__content content">
-
+                <!-- jQuery content here -->
             </section>
             <footer class="page__footer footer">
-
+                <div class="footer__sign-up-wrapper">
+                    <span class="footer__sign-up-text"></span>
+                    <button class="footer__sign-up-button circle-text-button"></button>
+                </div>
+                <div class="footer__info">
+                    <div class="footer__social">
+                        <img class="footer__social-img sprite sprite--facebook" src="" alt="facebook">
+                        <img class="footer__social-img sprite sprite--twitter" src="" alt="twitter">
+                        <img class="footer__social-img sprite sprite--instagram" src="" alt="instagram">
+                    </div>
+                    <address class="footer__address">
+                        sample text
+                    </address>
+                </div>
             </footer>
         </div>
     </body>
