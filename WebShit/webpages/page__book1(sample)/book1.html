@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <title>SmartBusiness Popular</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="../../style.css">
+        <link rel="stylesheet" href="book_style.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    </head>
+    <body class="page">
+        <div class="page__inner">
+            <header class="page__header header">
+                <a class="header__sign-in" href="#pop-up">ВХОД</a>
+                <a class="header__home-link" href="../../index.html">
+                    <img class="header__logo" src="../../icons/logo.png" alt="логотип">
+                </a>
+                <div class="header__right-buttons-wrapper">
+                    <input class="header__search" type="text" placeholder="ПОИСК">
+                    <a href="header__shopping-cart-button header-button icon-button">
+                        <img class="icon-button__img" src="../../icons/shoping.png" alt="">
+                        <div class="icon-button__counter">
+                            7
+                        </div>
+                    </a>
+                </div>
+            </header>
+            <section class="page__book book">
+                <h2 class="book__title">МЕТРО 2035</h2>
+                <a class="book__back-button" href="../popular_page/popular.html">✖</a>
+                <img class="book__img" src="../../content/page__popular/9.jpg" alt="книга">
+                <div class="book__info">
+                    <input class="book__nav-button" type="radio" name="tab-group" id="tab-1" checked>
+                    <label class="book__nav-label" for="tab-1">О книге</label>
+                    <input class="book__nav-button" type="radio" name="tab-group" id="tab-2">
+                    <label class="book__nav-label" for="tab-2">Отзывы</label>
+                    <input class="book__nav-button" type="radio" name="tab-group" id="tab-3">
+                    <label class="book__nav-label" for="tab-3">Доставка</label>
+                    <article class="book__description">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    </article>
+                    <article class="book__reviews">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    </article>
+                    <article class="book__shipping">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    </article>
+                    <div class="book__options">
+                        <p class="book__quantity-title">Количество</p>
+                        <div class="book__quantity-button">
+                            <button class="book__quntity-button-minus">–</button>
+                            <p class="book__current-counter">1</p>
+                            <button class="book__quntity-button-plus">+</button>
+                        </div>
+                        <p class="book__avaliable">Доступно: 5</p>
+                        <p class="book__price">1500₽</p>
+                        <button class="book__add-to-cart">Добавить в корзину</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- POP-UP LOGIN WINDOW -->
+            <div class="login-pop-up" id="pop-up">
+                <a class="login-pop-up__close-button" href="#"></a>
+                <p class="login-pop-up__title">ВХОД</p>
+                <form class="login-pop-up__form" action="">
+                    <div class="login-pop-up__wrapper form-input">
+                        <label class="form-input__name" for="login">Логин</label>
+                        <input class="form-input__input" type="text" id="login">
+                    </div>
+                    <div class="login-pop-up__wrapper form-input">
+                        <label class="form-input__name" for="password">Пароль</label>
+                        <input class="form-input__input" type="password" id="password">
+                    </div>
+                    <input class="login-pop-up__submit-button" type="submit" value="ВОЙТИ">
+                    <div class="login-pop-up__wrapper login-extra-option">
+                        <a class="login-extra-option__forget-password" href="">Забыли пароль?</a>
+                        <a class="login-extra-option__sign-up" href="">ЗАРЕГИСТРИРОВАТЬСЯ</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>

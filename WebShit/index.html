@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <title>SmartBusiness</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="style.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    </head>
+    <body class="page">
+        <div class="page__inner">
+            <header class="page__header header">
+                <a class="header__sign-in" href="#pop-up">ВХОД</a>
+                <a class="header__home-link" href="#">
+                    <img class="header__logo" src="icons/logo.png" alt="логотип">
+                </a>
+                <div class="header__right-buttons-wrapper">
+                    <input class="header__search" type="text" placeholder="ПОИСК">
+                    <a href="header__shopping-cart-button header-button icon-button">
+                        <img class="icon-button__img" src="icons/shoping.png" alt="">
+                        <div class="icon-button__counter">
+                            7
+                        </div>
+                    </a>
+                </div>
+            </header>
+            <section class="page__category category">
+                <!-- jQuery category here -->
+                <a class="category__item-link-wrapper" href="webpages/popular_page/popular.html">
+                    <figure class="category__item item">
+                        <img class="item__img" src="content/home-page__category/sale.jpg" alt="">
+                        <figcaption class="item__description">
+                            <h3>АКЦИИ</h3>
+                        </figcaption>
+                    </figure>
+                </a>
+                <a class="category__item-link-wrapper" href="webpages/popular_page/popular.html">
+                    <figure class="category__item item">
+                        <img class="item__img" src="content/home-page__category/popular.jpg" alt="">
+                        <figcaption class="item__description">
+                            <h3>ПОПУЛЯРНОЕ</h3>
+                        </figcaption>
+                    </figure>
+                </a>
+                <a class="category__item-link-wrapper" href="webpages/genre_page/genre.html">
+                    <figure class="category__item item">
+                        <img class="item__img" src="content/home-page__category/section.jpg" alt="">
+                        <figcaption class="item__description">
+                            <h3>ЖАНРЫ</h3>
+                        </figcaption>
+                    </figure>
+                </a>
+                <a class="category__item-link-wrapper" href="webpages/popular_page/popular.html">
+                    <figure class="category__item item">
+                        <img class="item__img" src="content/home-page__category/personal.jpg" alt="">
+                        <figcaption class="item__description">
+                            <h3>ДЛЯ ВАС</h3>
+                        </figcaption>
+                    </figure>
+                </a>
+                <a class="category__item-link-wrapper" href="webpages/popular_page/popular.html">
+                    <figure class="category__item item">
+                        <img class="item__img" src="content/home-page__category/all.jpg" alt="">
+                        <figcaption class="item__description">
+                            <h3>ВСЕ</h3>
+                        </figcaption>
+                    </figure>
+                </a>
+                <a class="category__item-link-wrapper" href="">
+                    <figure class="category__item item">
+                        <img class="item__img" src="content/home-page__category/about-us.jpg" alt="">
+                        <figcaption class="item__description">
+                            <h3>О НАС</h3>
+                        </figcaption>
+                    </figure>
+                </a>
+            </section>
+
+            <!-- POP-UP LOGIN WINDOW -->
+            <div class="login-pop-up" id="pop-up">
+                <a class="login-pop-up__close-button" href="#"></a>
+                <p class="login-pop-up__title">ВХОД</p>
+                <form class="login-pop-up__form" action="">
+                    <div class="login-pop-up__wrapper form-input">
+                        <label class="form-input__name" for="login">Логин</label>
+                        <input class="form-input__input" type="text" id="login">
+                    </div>
+                    <div class="login-pop-up__wrapper form-input">
+                        <label class="form-input__name" for="password">Пароль</label>
+                        <input class="form-input__input" type="password" id="password">
+                    </div>
+                    <input class="login-pop-up__submit-button" type="submit" value="ВОЙТИ">
+                    <div class="login-pop-up__wrapper login-extra-option">
+                        <a class="login-extra-option__forget-password" href="">Забыли пароль?</a>
+                        <a class="login-extra-option__sign-up" href="">ЗАРЕГИСТРИРОВАТЬСЯ</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>
