@@ -6,11 +6,11 @@ import java.io.FileReader;
 
 public class Network {
     private double LEARNING_RATE = 0.001;
-    private int EPOCHES = 1000;
+    private int EPOCHES = 10000;
     private int NUMBER_OF_EXAMPLES;
     private int INPUT = 13;
-    private int HIDDEN_1 = 8;
-    private int HIDDEN_2 = 4;
+    private int HIDDEN_1 = 18;
+    private int HIDDEN_2 = 9;
     private int OUTPUT = 1;
 
     private double[][] mat1 = new double[INPUT][HIDDEN_1]; // Веса рёбер
