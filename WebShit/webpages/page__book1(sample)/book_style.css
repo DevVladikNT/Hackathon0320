@@ -1,0 +1,196 @@
+.book {
+    display: grid;
+    grid-template-columns: auto 600px 450px auto;
+    grid-template-rows: auto;
+    grid-template-areas: 
+        "empty1 title back-button empty2"
+        "empty1 picture info empty2";
+}
+
+.book__title {
+    grid-area: title;
+    margin: 0;
+
+    font-size: 60px;
+}
+
+.book__back-button {
+    grid-area: back-button;
+
+    color: #FFF;
+    text-decoration: none;
+
+    font-size: 40px;
+    justify-self: end;
+
+    transition: 0.2s ease;
+}
+
+.book__back-button:hover {
+    color: rgb(190, 190, 190);
+}
+
+.book__img {
+    grid-area: picture;
+
+    max-width: 500px;
+    object-fit: cover;
+}
+
+.book__info {
+    grid-area: info;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 50px 3fr 1fr;
+    grid-template-areas: 
+        "nav1 nav2 nav3"
+        "article article article"
+        "options options options";
+}
+
+#tab-1,
+#tab-1 + .book__nav-label {
+    grid-area: nav1;
+}
+
+#tab-2,
+#tab-2 + .book__nav-label {
+    grid-area: nav2;
+}
+
+#tab-3,
+#tab-3 + .book__nav-label {
+    grid-area: nav3;
+}
+
+.book__nav-button {
+    /* visibility: hidden; */
+    display: none;
+}
+
+.book__nav-label {
+    cursor: pointer;
+    font: 28px 'Oswald', sans-serif;
+    margin-right: 10px;
+}
+
+.book__nav-button:hover + .book__nav-label {
+    color: rgb(190, 190, 190);
+}
+
+.book__nav-button:checked + .book__nav-label {
+    color: #F26680;
+}
+
+.book__description,
+.book__reviews,
+.book__shipping {
+    display: none;
+    grid-area: article;
+
+    overflow: hidden;
+}
+
+#tab-1:checked ~ .book__description {
+    display: block;
+}
+
+#tab-2:checked ~ .book__reviews {
+    display: block;
+}
+
+#tab-3:checked ~ .book__shipping {
+    display: block;
+}
+
+.book__options {
+    grid-area: options;
+    padding-top: 20px;
+    border-top: 2px solid #F26680;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 50px 70px;
+    grid-template-areas: 
+        "quantity-text plus-minus avaliable"
+        "price empty add-to-cart";
+}
+
+.book__quantity-title {
+    grid-area: quantity-text;
+
+    margin: 0;
+    font-size: 26px;
+}
+
+.book__quantity-button {
+    grid-area: plus-minus;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 2px solid #FFF;
+    border-radius: 30px;
+}
+
+.book__quntity-button-minus,
+.book__quntity-button-plus {
+    background-color: rgba(0,0,0,0);
+    border: 0;
+
+    cursor: pointer;
+    color: #FFF;
+    font: 42px 'Oswald', sans-serif;
+}
+
+.book__quntity-button-minus:hover,
+.book__quntity-button-plus:hover {
+    color: rgb(190, 190, 190);
+}
+
+.book__quntity-button-minus {
+    margin-left: 10px;
+    padding-bottom: 7px;
+}
+
+.book__quntity-button-plus {
+    margin-right: 10px;
+}
+
+.book__current-counter {
+    font-size: 26px;
+}
+
+.book__avaliable {
+    grid-area: avaliable;
+    justify-self: end;
+    margin: 0;
+    font-size: 20px;
+}
+
+.book__price {
+    grid-area: price;
+    margin: 0;
+    font-size: 50px;
+}
+
+.book__add-to-cart {
+    /* grid-area: add-to-cart; */
+    grid-column: 2 / span 2;
+    grid-row: 2 / 3;
+    /* align-self: flex-end; */
+    margin: 10px 0px 10px 20px;
+    border: 0;
+    border-radius: 5px;
+    background-color: #F27E88;
+    color: #FFF;
+    cursor: pointer;
+    font: 24px 'Oswald', sans-serif;
+
+    transition: 0.2s ease;
+}
+
+.book__add-to-cart:hover {
+    background-color: #F26680;
+}

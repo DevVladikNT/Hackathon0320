@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Oswald:500&display=swap');
 
+button:focus {
+    outline: 0;
+}
+
 h3 {
     margin: 0;
 }
