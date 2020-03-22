@@ -1,16 +1,14 @@
 package vladiknt;
 
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileReader;
+import java.io.*;
 
 public class Network {
-    private double LEARNING_RATE = 2;
+    private double LEARNING_RATE = 0.05;
     private int EPOCHES = 100000;
     private int NUMBER_OF_EXAMPLES;
     private int INPUT = 10; // default = 13
-    private int HIDDEN_1 = 8;
-    private int HIDDEN_2 = 3;
+    private int HIDDEN_1 = 12;
+    private int HIDDEN_2 = 6;
     private int OUTPUT = 1;
 
     private double[][] mat1 = new double[INPUT][HIDDEN_1]; // Веса рёбер
@@ -25,7 +23,7 @@ public class Network {
 
     public Network(boolean a) {
         if (a) {
-            // TODO дописать
+            load();
         } else {
             for (int i = 0; i < mat1.length; i++) {
                 for (int j = 0; j < mat1[0].length; j++) {
@@ -42,19 +40,84 @@ public class Network {
                     mat3[i][j] = Math.random()*2 - 1;
                 }
             }
+            train();
         }
     }
 
     private void load() {
-        //
+        File file = new File("memory.txt");
+        try {
+            FileReader fr  = new FileReader(file);
+            BufferedReader br = new BufferedReader(fr);
+            for (int i = 0; i < INPUT; i++) {
+                String[] str =  br.readLine().split(" ");
+                for (int j = 0; j < mat1[0].length; j++) {
+                    mat1[i][j] = Double.parseDouble(str[j]);
+                }
+            }
+            br.readLine();
+            for (int i = 0; i < HIDDEN_1; i++) {
+                String[] str =  br.readLine().split(" ");
+                for (int j = 0; j < mat2[0].length; j++) {
+                    mat2[i][j] = Double.parseDouble(str[j]);
+                }
+            }
+            br.readLine();
+            for (int i = 0; i < HIDDEN_2; i++) {
+                String[] str =  br.readLine().split(" ");
+                for (int j = 0; j < mat3[0].length; j++) {
+                    mat3[i][j] = Double.parseDouble(str[j]);
+                }
+            }
+        } catch (Exception e) {
+            System.out.println("File memory.txt has errors");
+        }
     }
 
-    private void save() {
-        //
+    public void save() throws IOException {
+        File file = new File("memory.txt");
+        file.delete();
+        file.createNewFile();
+        try {
+            FileWriter fw = new FileWriter(file);
+            BufferedWriter bw = new BufferedWriter(fw);
+            for (int i = 0; i < mat1.length; i++) {
+                for (int j = 0; j < mat1[0].length; j++) {
+                    bw.write(Double.toString(mat1[i][j]) + " ");
+                }
+                bw.newLine();
+            }
+
+            bw.newLine();
+
+            for (int i = 0; i < mat2.length; i++) {
+                for (int j = 0; j < mat2[0].length; j++) {
+                    bw.write(Double.toString(mat2[i][j]) + " ");
+                }
+                bw.newLine();
+            }
+
+            bw.newLine();
+
+            for (int i = 0; i < mat3.length; i++) {
+                for (int j = 0; j < mat3[0].length; j++) {
+                    bw.write(Double.toString(mat3[i][j]) + " ");
+                }
+                bw.newLine();
+            }
+
+            fw.flush();
+            bw.flush();
+            fw.close();
+            bw.close();
+
+        } catch (Exception e) {
+            System.out.println("File memory.txt has errors");
+        }
     }
 
     private  void loadInput() {
-        //
+        // не успели реализовать
     }
 
     private void loadTrain() {
@@ -91,7 +154,7 @@ public class Network {
         return sigmoid(multiply(hiddenTrain2, mat3));
     }
 
-    public void train() {
+    private void train() {
         loadTrain();
         double[][] answer;
         double[][] arr = new double[1][INPUT];
