@@ -5,12 +5,12 @@ import java.io.File;
 import java.io.FileReader;
 
 public class Network {
-    private double LEARNING_RATE = 1;
-    private int EPOCHES = 10000;
+    private double LEARNING_RATE = 2;
+    private int EPOCHES = 100000;
     private int NUMBER_OF_EXAMPLES;
     private int INPUT = 10; // default = 13
     private int HIDDEN_1 = 8;
-    private int HIDDEN_2 = 4;
+    private int HIDDEN_2 = 3;
     private int OUTPUT = 1;
 
     private double[][] mat1 = new double[INPUT][HIDDEN_1]; // Веса рёбер
