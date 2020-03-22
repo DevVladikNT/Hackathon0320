@@ -47,6 +47,10 @@ h3 {
     font-size: 24px;
 }
 
+.header__sign-in:hover {
+    color: rgb(190, 190, 190);
+}
+
 .header__home-link {
     /* display: block; */
     padding: 0 auto;
