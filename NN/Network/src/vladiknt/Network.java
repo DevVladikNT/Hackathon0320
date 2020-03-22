@@ -5,12 +5,12 @@ import java.io.File;
 import java.io.FileReader;
 
 public class Network {
-    private double LEARNING_RATE = 0.001;
+    private double LEARNING_RATE = 1;
     private int EPOCHES = 10000;
     private int NUMBER_OF_EXAMPLES;
-    private int INPUT = 13;
-    private int HIDDEN_1 = 18;
-    private int HIDDEN_2 = 9;
+    private int INPUT = 10; // default = 13
+    private int HIDDEN_1 = 8;
+    private int HIDDEN_2 = 4;
     private int OUTPUT = 1;
 
     private double[][] mat1 = new double[INPUT][HIDDEN_1]; // Веса рёбер
@@ -96,7 +96,7 @@ public class Network {
         double[][] answer;
         double[][] arr = new double[1][INPUT];
 
-        double[][] errorOutput;
+        double[][] errorOutput = new double[1][1];
         double[][] errorHidden2;
         double[][] errorHidden1;
         double[][] delta1;
@@ -108,10 +108,11 @@ public class Network {
                 for (int k = 0; k < INPUT; k++) {
                     arr[0][k] = inputTrain[j][k];
                 }
+
                 answer = predict(arr);
                 System.out.println(ASE(answer[0][0], expectedOutput[j][0])); //TODO выпилить
 
-                errorOutput = substract(answer, expectedOutput);
+                errorOutput[0][0] = answer[0][0] - expectedOutput[j][0];
                 delta3 = multiplyElements(errorOutput, substract(answer, multiplyElements(answer, answer)));
                 mat3 = substract(mat3, multiplyOnElement(multiply(transposition(hiddenTrain2), delta3), LEARNING_RATE));
 
